@@ -1,0 +1,329 @@
+/* === Universal Reset === */
+* { /* Apply styles to all elements */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+/* === Body Setup === */
+body {
+  background-color: #000; /* Black background for dark theme */
+  color: #ffc0cb; /* Default text color (light pink) */
+  font-family: Arial, sans-serif; /* Main font style */
+  line-height: 1.6; /* Improved line spacing */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 20px; /* Space from screen edges */
+  padding-top: 80px; /* Offset for fixed navigation bar */
+}
+
+/* === Wrapper Layout === */
+.wrapper {
+  max-width: 1200px; /* Limit content width */
+  margin: 0 auto; /* Center wrapper horizontally */
+  padding: 0 2rem; /* Add side padding */
+}
+
+/* === Navigation Bar === */
+nav {
+  position: fixed; /* Keep nav at top */
+  top: 0; /* Align to top of page */
+  left: 0; /* Align to left of page */
+  width: 100%; /* Full width nav bar */
+  background-color: #000; /* Match body background */
+  z-index: 1000; /* Ensure nav is on top */
+  padding: 1.5rem 2rem; /* Padding for space */
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Vertically center content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow under nav */
+}
+
+nav .logo {
+  font-size: 1.8rem; /* Larger logo text */
+  font-weight: 700; /* Bold text */
+  color: #ff69b4; /* Pink logo text */
+}
+
+nav ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Arrange list items in a row */
+  gap: 2rem; /* Space between nav items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #ff69b4; /* Pink nav text */
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 600; /* Semi-bold text */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+  color: #fff; /* White on hover */
+}
+
+/* === Home Section === */
+#home {
+  padding-top: 140px; /* Space below fixed nav */
+}
+
+/* === About Section === */
+.about-content {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+  gap: 2rem; /* Space between elements */
+  text-align: center; /* Center text */
+}
+
+.about-content img {
+  width: 150px; /* Set profile image size */
+  height: 150px; /* Set height to match width */
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Maintain aspect ratio */
+  border: 2px solid #ff69b4; /* Pink border */
+}
+
+/* === Education Download Button === */
+.download-btn {
+  display: inline-block; /* Treat like inline element with block behavior */
+  margin-top: 1rem; /* Space above button */
+  padding: 0.5rem 1rem; /* Inner padding */
+  background-color: #ff69b4; /* Pink background */
+  color: #000; /* Black text */
+  text-decoration: none; /* No underline */
+  border-radius: 6px; /* Rounded corners */
+  transition: background 0.3s; /* Smooth background change */
+}
+
+.download-btn:hover {
+  background-color: #fff; /* White on hover */
+  color: #000; /* Keep black text */
+}
+
+/* === Projects Section === */
+.project {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack elements */
+  background-color: #111; /* Dark card background */
+  border: 1px solid #444; /* Border around project card */
+  margin-bottom: 2rem; /* Space between cards */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  transition: transform 0.3s; /* Smooth scale transition */
+}
+
+.project:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  border-color: #ff69b4; /* Highlight border */
+}
+
+.project-img {
+  width: 100%; /* Full width image */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Keep image aspect */
+}
+
+.project-info {
+  padding: 1rem; /* Inner padding */
+}
+
+.project-info h3 {
+  margin-bottom: 0.5rem; /* Space below heading */
+}
+
+.project-link {
+  color: #ff69b4; /* Pink text */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Bold link */
+}
+
+.project-link:hover {
+  color: #fff; /* White on hover */
+}
+
+/* === Blog Section === */
+.blog-section {
+  background-color: pink; /* Light background */
+  color: black; /* Dark text for contrast */
+  border-radius: 10px; /* Rounded corners */
+  padding: 40px 20px; /* Spacing around blog */
+  margin: 2rem 0; /* Space above and below */
+}
+
+.blog-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack blog posts */
+  gap: 2rem; /* Space between posts */
+}
+
+@media (min-width: 768px) {
+  .blog-container {
+    flex-direction: row; /* Side by side on larger screens */
+    justify-content: space-between; /* Distribute space */
+  }
+}
+
+.blog-post {
+  background-color: #fff; /* White card */
+  padding: 20px; /* Inner space */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  flex: 1; /* Allow flexible width */
+  transition: transform 0.3s; /* Zoom effect */
+}
+
+.blog-post:hover {
+  transform: scale(1.01); /* Slight zoom */
+  border-color: #ff69b4; /* Pink border (if border added) */
+}
+
+.blog-content h3 {
+  margin-bottom: 10px; /* Space below heading */
+  font-size: 1.4rem; /* Larger heading */
+}
+
+.blog-content p {
+  font-size: 1rem; /* Normal text size */
+  margin-bottom: 15px; /* Space below paragraph */
+  max-width: 800px; /* Limit paragraph width */
+}
+
+.read-more {
+  color: black; /* Default color */
+  text-decoration: underline; /* Underlined link */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.read-more:hover {
+  color: #333; /* Slightly darker text */
+  background-color: #ffd6eb; /* Light pink background */
+  padding: 0.2rem 0.5rem; /* Padding on hover */
+  border-radius: 4px; /* Rounded hover box */
+}
+
+/* === Contact Section === */
+#contact p {
+  margin: 0.8rem 0; /* Vertical spacing */
+  font-size: 1rem; /* Normal size text */
+}
+
+#contact a {
+  color: #ff69b4; /* Pink links */
+  text-decoration: none; /* No underline */
+}
+
+#contact a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* === Footer === */
+footer {
+  text-align: center; /* Centered text */
+  padding: 1.5rem; /* Padding around footer */
+  background-color: #111; /* Dark background */
+  border-top: 1px solid #333; /* Top border line */
+  font-size: 0.9rem; /* Slightly smaller text */
+}
+
+/* === Contact List Styling === */
+.contact-list {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* No padding */
+  margin-top: 2rem; /* Space above list */
+}
+
+.contact-list li {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Align icons and text */
+  gap: 1rem; /* Space between icon and text */
+  margin-bottom: 1.2rem; /* Space between items */
+  font-size: 1.1rem; /* Slightly larger text */
+  transition: transform 0.3s; /* Slide effect on hover */
+}
+
+.contact-list li:hover {
+  transform: translateX(8px); /* Slide right */
+}
+
+.contact-list i {
+  font-size: 1.3rem; /* Icon size */
+  color: #ff69b4; /* Icon color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-list a, .contact-list span {
+  color: #ffc0cb; /* Light pink text */
+  text-decoration: none; /* No underline */
+  font-weight: 500; /* Medium weight */
+}
+
+.contact-list a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #fff; /* White on hover */
+}
+
+/* === HTML Scroll Behavior === */
+html {
+  scroll-behavior: smooth; /* Smooth scroll for links */
+}
+
+/* === Section Offset Scroll === */
+section {
+  scroll-margin-top: 80px; /* Offset for sticky nav */
+}
+
+/* === Skills Section === */
+#skills {
+  background-color: #1a1a1a; /* Dark background */
+  color: pink; /* Pink text */
+  padding: 50px 20px; /* Inner padding */
+  text-align: center; /* Center content */
+}
+
+.skills-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+  gap: 30px; /* Gap between grid items */
+  max-width: 1000px; /* Max width of container */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.skill {
+  background-color: #2a2a2a; /* Darker background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding inside */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.skill:hover {
+  transform: translateY(-8px) scale(1.03); /* Pop-up effect */
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.3); /* Pink shadow */
+}
+
+.skill-icon {
+  font-size: 2.5rem; /* Large icon */
+  display: block; /* Treat as block element */
+  margin-bottom: 10px; /* Space below icon */
+  animation: bounceIn 1s ease forwards; /* Animate icon */
+}
+
+/* === Icon Animation === */
+@keyframes bounceIn {
+  0% {
+    opacity: 0; /* Start transparent */
+    transform: scale(0.3); /* Start small */
+  }
+  50% {
+    opacity: 1; /* Fade in */
+    transform: scale(1.1); /* Slightly bigger */
+  }
+  70% {
+    transform: scale(0.9); /* Slight shrink */
+  }
+  100% {
+    transform: scale(1); /* Final size */
+  }
+}
